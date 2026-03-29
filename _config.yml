@@ -1,11 +1,15 @@
 # Site settings
 title: Math Blog
-description: A Jekyll theme for mathematics blogs
+description: >
+  A Jekyll theme for mathematics blogs
+  supports MathJax or KaTeX, Sagecell, GeoGebra, Mermaid, Marp, Reveal.js and more.
 author:
   name: Your Name
   github: yourusername
   email: your@email.com
 
+# site.lang
+lang: "zh-CN"
 # Date format
 date_format: "%Y-%m-%d"
 
