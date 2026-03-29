@@ -2,9 +2,9 @@
   <div class="site-header__inner">
     <a href="{{ "/" | relative_url }}" class="site-header__logo">{{ site.title }}</a>
     <nav class="site-header__nav">
-      {% for item in site.nav %}
+      {%- for item in site.nav -%}
         <a href="{{ item.url }}">{{ item.title }}</a>
-      {% endfor %}
+      {%- endfor -%}
     </nav>
   </div>
 </header>

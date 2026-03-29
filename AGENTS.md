@@ -88,18 +88,18 @@ end
 
 - Use 2-space indentation
 - Use descriptive variable names
-- Prefer `{% elsif %}` over nested `{% if %}` statements
+- Prefer `{%- elsif -%}` over nested `{%- if -%}` statements
 - Use `capture` for complex variable assignments
-- Comment syntax: `{% # liquid comment %}` or `{% comment %}...{% endcomment %}`
+- Comment syntax: `{%- # liquid comment -%}` or `{%- comment -%}...{%- endcomment -%}`
 
 Example:
 ```liquid
-{% comment %}
+{%- comment -%}
   Page layout wrapper
-{% endcomment %}
-{% if page.title %}
+{%- endcomment -%}
+{%- if page.title -%}
   <h1>{{ page.title | escape }}</h1>
-{% endif %}
+{%- endif -%}
 
 {{ content }}
 ```

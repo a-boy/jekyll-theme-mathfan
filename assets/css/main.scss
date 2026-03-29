@@ -281,6 +281,21 @@ th { background-color: $color-bg-alt; font-weight: 600; }
   .operator, .punctuation { color: #d4d4d4; }
 }
 
+// Tags page
+.tag {
+  display: inline-block;
+  padding: $space-xs $space-sm;
+  margin: $space-xs;
+  background-color: $color-bg-alt;
+  border-radius: $border-radius;
+  color: $color-text-muted;
+  font-size: $font-size-sm;
+  &:hover {
+    background-color: $color-primary;
+    color: white;
+  }
+}
+
 // Social links
 .social-links {
   display: flex;

@@ -1,21 +1,22 @@
-{% if site.mathfan.comment == 'giscus' and site.mathfan.giscus.repo and site.mathfan.giscus.repo-id %}
+{%- if site.comment == 'giscus' and site.giscus.repo and site.giscus.repo-id -%}
 <script src="https://giscus.app/client.js"
-  data-repo="{{ site.mathfan.giscus.repo }}"
-  data-repo-id="{{ site.mathfan.giscus.repo-id }}"
-  data-category="{{ site.mathfan.giscus.category | default: 'Comments' }}"
-  data-category-id="{{ site.mathfan.giscus.category-id }}"
-  data-mapping="{{ site.mathfan.giscus.mapping | default: 'pathname' }}"
+  data-repo="{{ site.giscus.repo }}"
+  data-repo-id="{{ site.giscus.repo-id }}"
+  data-category="{{ site.giscus.category | default: 'Comments' }}"
+  data-category-id="{{ site.giscus.category-id }}"
+  data-mapping="{{ site.giscus.mapping | default: 'pathname' }}"
   data-strict="0"
   data-reactions-enabled="1"
   data-emit-metadata="0"
-  data-input-position="{{ site.mathfan.giscus.position | default: 'bottom' }}"
-  data-theme="{{ site.mathfan.giscus.theme | default: 'light' }}"
-  data-lang="{{ site.mathfan.giscus.lang | default: 'en' }}"
+  data-input-position="{{ site.giscus.position | default: 'top' }}"
+  data-theme="{{ site.giscus.theme | default: 'preferred_color_scheme' }}"
+  data-lang="{{ site.giscus.lang | site.lang | default: 'en' }}"
   data-loading="lazy"
   crossorigin="anonymous"
   async>
 </script>
-{% elsif site.mathfan.comment == 'disqus' and site.disqus.shortname %}
+
+{%- elsif site.comment == 'disqus' and site.disqus.shortname -%}
 <div id="disqus_thread"></div>
 <script>
   var disqus_config = function() {
@@ -31,4 +32,4 @@
   })();
 </script>
 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-{% endif %}
+{%- endif -%}

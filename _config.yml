@@ -1,35 +1,44 @@
 # Site settings
 title: Math Blog
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "" # the base hostname & protocol for your site, e.g. http://example.com
 description: >
   A Jekyll theme for mathematics blogs
   supports MathJax or KaTeX, Sagecell, GeoGebra, Mermaid, Marp, Reveal.js and more.
 author:
   name: Your Name
   github: yourusername
+  twitter: yourusername
   email: your@email.com
 
-# site.lang
-lang: "zh-CN"
-# Date format
-date_format: "%Y-%m-%d"
+# use custom theme，or set 
+#theme: mathfan
 
-# Mathfan theme settings
-mathfan:
-  # comment: giscus  # or 'disqus'
-  # giscus:
-  #   repo: "username/repo"
-  #   repo-id: "R_xxxx"
-  #   category: "Comments"
-  #   category-id: "DIC_xxxx"
-  # disqus:
-  #   shortname: "your-shortname"
-  # google-analytics: "G-XXXXXXXXXX"
+lang: "zh-CN"
+date_format: "%Y-%m-%d"
+permalink: /:categories/:year-:month-:day-:title:output_ext
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+# comment settings
+comment: giscus  # or 'disqus'
+giscus:
+  repo: "a-boy/jekyll-theme-mathfan"
+  repo-id: "R_kgDORzrsRA"
+  category: "Announcements"
+  category-id: "DIC_kwDORzrsRM4C5hfW"
+#disqus:
+#  shortname: "your-shortname"
+
+google-analytics: "G-40VKLYL0Q5" # replace with your own Google Analytics ID
 
 # Navigation (optional)
 nav:
   - title: About
-    url: /about/
+    url: /about.html
   - title: Archive
-    url: /archive/
+    url: /archive.html
   - title: Tags
-    url: /tags/
+    url: /tags.html

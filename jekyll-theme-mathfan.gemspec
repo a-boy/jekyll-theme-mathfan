@@ -10,7 +10,9 @@ Gem::Specification.new do |spec|
   spec.homepage      = "https://github.com/a-boy/jekyll-theme-mathfan"
   spec.license       = "MIT"
 
-  spec.files         = `git ls-files -z`.split("\x0").select { |f| f.match(%r!^(assets|_data|_layouts|_includes|_sass|LICENSE|README|_config\.yml)!i) }
+  spec.files         = `git ls-files -z`.split("\x0").select { |f| f.match(%r!^(assets|_data|_layouts|_includes|_sass|LICENSE|README|_config\.yml)!i) || f.include?("_posts") || f.include?("index.md") || f.include?("about.md") || f.include?("archive.md") || f.include?("tags.md") || f.include?("404.html") }
 
   spec.add_runtime_dependency "jekyll", "~> 4.4"
+  spec.add_runtime_dependency "jekyll-feed", "~> 0.17"
+  spec.add_runtime_dependency "jekyll-seo-tag", "~> 2.8"
 end
