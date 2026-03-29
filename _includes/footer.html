@@ -1,0 +1,9 @@
+<footer class="site-footer">
+  <p>
+    &copy; {{ site.time | date: "%Y" }} {{ site.title }}.
+    Powered by <a href="https://jekyllrb.com">Jekyll</a>.
+  </p>
+  {% if site.mathfan.social %}
+    {% include social.html %}
+  {% endif %}
+</footer>

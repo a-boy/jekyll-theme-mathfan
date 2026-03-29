@@ -1,0 +1,14 @@
+---
+layout: default
+---
+<div class="marp-container" data-marpit-svg>
+  {{ content }}
+</div>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/marpit@2/marpit.min.css">
+<script src="https://cdn.jsdelivr.net/npm/marpit@2/marpit.min.js"></script>
+<script>
+  const marpit = new Marpit();
+  const { html, css } = marpit.render({{ content | jsonify }});
+  document.querySelector('.marp-container').innerHTML = html;
+</script>

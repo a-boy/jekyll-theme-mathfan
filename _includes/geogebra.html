@@ -1,0 +1,28 @@
+<script src="https://cdn.jsdelivr.net/npm/geogebra@6/dist/geogebra.min.js"></script>
+<script>
+  window.addEventListener('load', function() {
+    document.querySelectorAll('.geogebra').forEach(function(el) {
+      var material = el.dataset.material || '';
+      var width = el.dataset.width || '100%';
+      var height = el.dataset.height || '400';
+      var applet = new GGBApplet({
+        material_id: material,
+        width: width,
+        height: height,
+        showMenuBar: false,
+        showAlgebraInput: false,
+        showToolBar: false,
+        showResetIcon: true
+      }, true);
+      applet.inject(el);
+    });
+  });
+</script>
+<style>
+  .geogebra {
+    margin: 16px 0;
+    border: 1px solid #e5e7eb;
+    border-radius: 2px;
+    overflow: hidden;
+  }
+</style>

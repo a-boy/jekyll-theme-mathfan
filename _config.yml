@@ -1,0 +1,31 @@
+# Site settings
+title: Math Blog
+description: A Jekyll theme for mathematics blogs
+author:
+  name: Your Name
+  github: yourusername
+  email: your@email.com
+
+# Date format
+date_format: "%Y-%m-%d"
+
+# Mathfan theme settings
+mathfan:
+  # comment: giscus  # or 'disqus'
+  # giscus:
+  #   repo: "username/repo"
+  #   repo-id: "R_xxxx"
+  #   category: "Comments"
+  #   category-id: "DIC_xxxx"
+  # disqus:
+  #   shortname: "your-shortname"
+  # google-analytics: "G-XXXXXXXXXX"
+
+# Navigation (optional)
+nav:
+  - title: About
+    url: /about/
+  - title: Archive
+    url: /archive/
+  - title: Tags
+    url: /tags/

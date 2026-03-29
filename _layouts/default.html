@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: 'en' }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% if page.title %}{{ page.title | escape }} - {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
+  <meta name="description" content="{{ page.excerpt | default: site.description }}">
+  <link rel="stylesheet" href="{{ "/assets/css/main.css" | relative_url }}">
+  {% if site.feed.path %}<link rel="alternate" type="{{ site.feed.type | default: "application/atom+xml" }}" title="{{ site.title }}" href="{{ site.feed.path | relative_url }}">{% endif %}
+  {% if site.mathfan.google-analytics %}
+    {% include google-analytics.html %}
+  {% endif %}
+</head>
+<body>
+  {% include header.html %}
+
+  <main class="site-main" id="main">
+    {% if page.features contains 'mathjax' and page.features contains 'katex' %}
+      {% assign has_mathjax = false %}
+      {% for feature in page.features %}
+        {% if feature == 'mathjax' and has_mathjax == false %}
+          {% assign has_mathjax = true %}
+        {% endif %}
+      {% endfor %}
+    {% endif %}
+
+    {% if page.features contains 'mathjax' and has_mathjax == false %}
+      {% assign has_mathjax = true %}
+    {% endif %}
+
+    {% if page.features contains 'katex' and has_mathjax == false %}
+      {% include katex.html %}
+    {% elsif page.features contains 'mathjax' %}
+      {% include mathjax.html %}
+    {% endif %}
+
+    {% if page.features contains 'sagecell' %}
+      {% include sagecell.html %}
+    {% endif %}
+
+    {% if page.features contains 'mermaid' %}
+      {% include mermaid.html %}
+    {% endif %}
+
+    {% if page.features contains 'geogebra' %}
+      {% include geogebra.html %}
+    {% endif %}
+
+    {{ content }}
+  </main>
+
+  {% include footer.html %}
+</body>
+</html>
