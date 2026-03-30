@@ -18,6 +18,8 @@ lang: "zh-CN"
 date_format: "%Y-%m-%d"
 permalink: /:categories/:year-:month-:day-:title:output_ext
 
+
+
 plugins:
   - jekyll-feed
   - jekyll-seo-tag

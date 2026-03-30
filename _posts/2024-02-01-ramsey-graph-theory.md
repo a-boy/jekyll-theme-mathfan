@@ -4,13 +4,10 @@ title: "Graph Theory: Ramsey Numbers"
 date: 2024-02-01
 categories:
   - GraphTheory
-  - Mathematics
 tags:
   - graph
   - ramsey-theory
-features:
-  - katex
-  - mermaid
+features: katex mermaid
 ---
 
 ## Introduction to Ramsey Theory

@@ -1,44 +1,40 @@
 <!DOCTYPE html>
 <html lang="{{ page.lang | default: site.lang | default: 'en' }}">
-{%- include head.html -%}
+
+<head>
+  {%- include head.html -%}
+  
+  {%- if page.features contains 'mathjax' -%}
+  {%- include mathjax.html -%}
+  {%- elsif page.features contains 'katex' -%}
+  {%- include katex.html -%}
+  {%- endif -%}
+
+  {%- if page.features contains 'sagecell' -%}
+  {%- include sagecell.html -%}
+  {%- endif -%}
+
+  {%- if page.features contains 'mermaid' -%}
+  {%- include mermaid.html -%}
+  {%- endif -%}
+
+  {%- if page.features contains 'geogebra' -%}
+  {%- include geogebra.html -%}
+  {%- endif -%}
+</head>
+
+</html>
+
 <body>
   {%- include header.html -%}
 
   <main class="site-main" id="main">
-    {%- if page.features contains 'mathjax' and page.features contains 'katex' -%}
-      {%- assign has_mathjax = false -%}
-      {%- for feature in page.features -%}
-        {%- if feature == 'mathjax' and has_mathjax == false -%}
-          {%- assign has_mathjax = true -%}
-        {%- endif -%}
-      {%- endfor -%}
-    {%- endif -%}
-
-    {%- if page.features contains 'mathjax' and has_mathjax == false -%}
-      {%- assign has_mathjax = true -%}
-    {%- endif -%}
-
-    {%- if page.features contains 'katex' and has_mathjax == false -%}
-      {%- include katex.html -%}
-    {%- elsif page.features contains 'mathjax' -%}
-      {%- include mathjax.html -%}
-    {%- endif -%}
-
-    {%- if page.features contains 'sagecell' -%}
-      {%- include sagecell.html -%}
-    {%- endif -%}
-
-    {%- if page.features contains 'mermaid' -%}
-      {%- include mermaid.html -%}
-    {%- endif -%}
-
-    {%- if page.features contains 'geogebra' -%}
-      {%- include geogebra.html -%}
-    {%- endif -%}
 
     {{ content }}
+
   </main>
 
   {%- include footer.html -%}
 </body>
+
 </html>

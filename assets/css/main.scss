@@ -88,12 +88,12 @@ code {
 }
 
 pre {
-  background-color: #1e1e1e;
-  color: #d4d4d4;
-  padding: $space-md;
+  background-color: #dff1de;
+  //color: #844d05;
+  padding: $space-unit;
   border-radius: $border-radius;
   overflow-x: auto;
-  margin-bottom: $space-md;
+  margin-bottom: $space-unit;
   code {
     background: none;
     padding: 0;
@@ -107,8 +107,8 @@ img {
 }
 
 ul, ol {
-  padding-left: $space-lg;
-  margin-bottom: $space-md;
+  padding-left: $space-unit;
+  margin-bottom: $space-unit;
 }
 
 li { margin-bottom: $space-xs; }

@@ -2,7 +2,7 @@
 layout: post
 title: "Euler's Identity"
 date: 2024-01-20
-categories: Mathematics
+categories: Algebra
 tags: euler complex-numbers
 features:
   - mathjax

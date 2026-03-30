@@ -2,7 +2,8 @@
 layout: post
 title: "Quadratic Formula Proof"
 date: 2024-01-15
-categories: Mathematics
+categories: 
+  - algebra
 tags: algebra equations proof
 features:
   - katex

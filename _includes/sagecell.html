@@ -1,24 +1,14 @@
 <script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script>
 <script>
-  window.addEventListener('load', function() {
-    sagecell.makeSagecell({
-      inputLocation: '.sagecell',
-      linked: true,
-      autoeval: true,
-      hide: ['editorToggle', 'language', 'location']
-    });
+  sagecell.makeSagecell({
+    inputLocation: '.sage',
+    languages: sagecell.allLanguages,
+    evalButtonText: 'Eval',
+    linked: true,
+  });
+  sagecell.makeSagecell({
+    inputLocation: '.language-sage',
+    languages: sagecell.allLanguages,
+    evalButtonText: 'Eval',
   });
 </script>
-<style>
-  .sagecell .CodeMirror {
-    font-size: 13px;
-    min-height: 200px;
-  }
-  .sagecell > div {
-    border: 1px solid #e5e7eb;
-    border-radius: 2px;
-  }
-  .sagecell_output pre {
-    background: #f9fafb;
-  }
-</style>

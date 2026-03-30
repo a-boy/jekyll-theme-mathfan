@@ -13,7 +13,7 @@ This is a Jekyll theme designed for mathematics blogs, featuring:
 
 ## Recent Posts
 
-{% for post in site.posts limit:5 %}
+{% for post in site.posts limit:500 %}
 - [{{ post.title }}]({{ post.url }}) <small>({{ post.date | date: "%Y-%m-%d" }})</small>
 {% endfor %}
 
